@@ -1,0 +1,8 @@
+# https://www.eurocert.asia — update sitemap URL if the production domain differs
+User-agent: *
+Allow: /
+
+Disallow: /admin
+Disallow: /admin/
+
+Sitemap: https://www.eurocert.asia/sitemap.xml
