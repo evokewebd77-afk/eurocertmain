@@ -131,7 +131,7 @@ export default function GlobalPresenceMap() {
         if (!isHQ) {
           const curvedPoints = getCurvedPoints(hqPos, country.position);
           L.polyline(curvedPoints, {
-            color: '#D4A843',
+            color: '#d8ad4c',
             weight: 1.4,
             opacity: 0.55,
             smoothFactor: 1,
@@ -165,7 +165,7 @@ export default function GlobalPresenceMap() {
         const popupContent = `
           <div style="background:#061021; color:#fff; padding:10px 14px; border-radius:12px; border:1px solid rgba(212,168,67,0.4); font-family:sans-serif; min-width:180px; box-shadow:0 10px 30px rgba(0,0,0,0.5);">
             <div style="display:flex; align-items:center; gap:6px; margin-bottom:4px;">
-              <span style="color:#D4A843; font-weight:bold; font-size:13px;">${isHQ ? '★ ' : '📍 '}</span>
+              <span style="color:#d8ad4c; font-weight:bold; font-size:13px;">${isHQ ? '★ ' : '📍 '}</span>
               <strong style="font-size:14px; color:#fff;">${country.name}</strong>
             </div>
             <p style="margin:0; font-size:11px; color:rgba(255,255,255,0.65); line-height:1.4;">${country.desc}</p>
@@ -207,15 +207,15 @@ export default function GlobalPresenceMap() {
 
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#D4A843]/10 border border-[#D4A843]/30 mb-4 shadow-[0_0_20px_rgba(212,168,67,0.15)]">
-            <span className="w-2 h-2 rounded-full bg-[#D4A843] animate-pulse"></span>
-            <span className="text-xs font-bold text-[#D4A843] uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#d8ad4c]/10 border border-[#d8ad4c]/30 mb-4 shadow-[0_0_20px_rgba(212,168,67,0.15)]">
+            <span className="w-2 h-2 rounded-full bg-[#d8ad4c] animate-pulse"></span>
+            <span className="text-xs font-bold text-[#d8ad4c] uppercase tracking-widest">
               49 countries <span className="text-white/40 font-normal">and growing</span>
             </span>
           </div>
 
           <h2 className="heading-font text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
-            Global <span className="bg-gradient-to-r from-[#D4A843] via-[#f3e5ab] to-[#D4A843] bg-clip-text text-transparent">Presence</span>
+            Global <span className="bg-gradient-to-r from-[#d8ad4c] via-[#f3e5ab] to-[#d8ad4c] bg-clip-text text-transparent">Presence</span>
           </h2>
 
           <p className="text-white/60 text-sm sm:text-base leading-relaxed">
@@ -235,7 +235,7 @@ export default function GlobalPresenceMap() {
                 placeholder="Search country..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full bg-[#030a16]/95 backdrop-blur-md border border-white/20 rounded-2xl pl-11 pr-4 py-3.5 text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#D4A843] shadow-[0_10px_30px_rgba(0,0,0,0.5)] transition-all"
+                className="w-full bg-[#030a16]/95 backdrop-blur-md border border-white/20 rounded-2xl pl-11 pr-4 py-3.5 text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#d8ad4c] shadow-[0_10px_30px_rgba(0,0,0,0.5)] transition-all"
               />
             </div>
           </div>
@@ -259,8 +259,8 @@ export default function GlobalPresenceMap() {
                   onClick={() => handleCountryClick(c)}
                   className={`px-3.5 py-2 rounded-xl text-xs font-semibold transition-all duration-300 flex items-center gap-1.5 ${
                     isSelected
-                      ? 'bg-gradient-to-r from-[#D4A843] to-[#e5bc5f] text-slate-950 font-bold shadow-[0_0_18px_rgba(212,168,67,0.45)] scale-105 border border-[#D4A843]'
-                      : 'bg-white/5 hover:bg-white/10 text-white/80 border border-white/10 hover:border-[#D4A843]/40'
+                      ? 'bg-gradient-to-r from-[#d8ad4c] to-[#e5bc5f] text-slate-950 font-bold shadow-[0_0_18px_rgba(212,168,67,0.45)] scale-105 border border-[#d8ad4c]'
+                      : 'bg-white/5 hover:bg-white/10 text-white/80 border border-white/10 hover:border-[#d8ad4c]/40'
                   }`}
                 >
                   {c.isHQ && <span className="text-amber-300 font-bold">★</span>}
