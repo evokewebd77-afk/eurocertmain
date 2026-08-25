@@ -36,40 +36,40 @@ const row3Duplicated = [...row3, ...row3];
       </p>
     </div>
 
-    <div class="space-y-4">
-      <!-- Row 1: Left Marquee -->
-      <div class="overflow-hidden relative py-4">
+    <div class="space-y-6">
+      <!-- Row 1: Left Marquee Slider -->
+      <div class="overflow-hidden relative py-2">
         <div class="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-[#030a16] to-transparent pointer-events-none"></div>
         <div class="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-[#030a16] to-transparent pointer-events-none"></div>
-        <div class="flex gap-6 items-center w-max animate-marquee-left">
+        <div class="flex gap-6 items-center w-max animate-marquee-left" style="animation: marquee-left 40s linear infinite;">
           {row1Duplicated.map((file, idx) => (
-            <div class="flex-shrink-0 w-24 h-24 md:w-28 md:h-28 bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.15)] flex items-center justify-center p-4 hover:shadow-[0_8px_30px_rgba(212,168,67,0.15)] hover:border-eurogold-400/20 transition-all duration-300 group">
+            <div class="flex-shrink-0 w-24 h-24 md:w-28 md:h-28 bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.15)] flex items-center justify-center p-4 hover:shadow-[0_8px_30px_rgba(212,168,67,0.25)] hover:scale-105 hover:border-eurogold-400/30 transition-all duration-300 group cursor-pointer">
               <img src={`/${file}`} alt="Certification Standard Logo" class="max-w-full max-h-full object-contain opacity-85 group-hover:opacity-100 transition-opacity duration-300" width="112" height="112" loading="lazy" />
             </div>
           ))}
         </div>
       </div>
 
-      <!-- Row 2: Right Marquee -->
-      <div class="overflow-hidden relative py-4">
+      <!-- Row 2: Right Marquee Slider -->
+      <div class="overflow-hidden relative py-2">
         <div class="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-[#030a16] to-transparent pointer-events-none"></div>
         <div class="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-[#030a16] to-transparent pointer-events-none"></div>
-        <div class="flex gap-6 items-center w-max animate-marquee-right">
+        <div class="flex gap-6 items-center w-max animate-marquee-right" style="animation: marquee-right 35s linear infinite;">
           {row2Duplicated.map((file, idx) => (
-            <div class="flex-shrink-0 w-24 h-24 md:w-28 md:h-28 bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.15)] flex items-center justify-center p-4 hover:shadow-[0_8px_30px_rgba(212,168,67,0.15)] hover:border-eurogold-400/20 transition-all duration-300 group">
+            <div class="flex-shrink-0 w-24 h-24 md:w-28 md:h-28 bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.15)] flex items-center justify-center p-4 hover:shadow-[0_8px_30px_rgba(212,168,67,0.25)] hover:scale-105 hover:border-eurogold-400/30 transition-all duration-300 group cursor-pointer">
               <img src={`/${file}`} alt="Certification Standard Logo" class="max-w-full max-h-full object-contain opacity-85 group-hover:opacity-100 transition-opacity duration-300" width="112" height="112" loading="lazy" />
             </div>
           ))}
         </div>
       </div>
 
-      <!-- Row 3: Left Marquee -->
-      <div class="overflow-hidden relative py-4">
+      <!-- Row 3: Left Marquee Slider -->
+      <div class="overflow-hidden relative py-2">
         <div class="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-[#030a16] to-transparent pointer-events-none"></div>
         <div class="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-[#030a16] to-transparent pointer-events-none"></div>
-        <div class="flex gap-6 items-center w-max animate-marquee-left-fast">
+        <div class="flex gap-6 items-center w-max animate-marquee-left-fast" style="animation: marquee-left 38s linear infinite;">
           {row3Duplicated.map((file, idx) => (
-            <div class="flex-shrink-0 w-24 h-24 md:w-28 md:h-28 bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.15)] flex items-center justify-center p-4 hover:shadow-[0_8px_30px_rgba(212,168,67,0.15)] hover:border-eurogold-400/20 transition-all duration-300 group">
+            <div class="flex-shrink-0 w-24 h-24 md:w-28 md:h-28 bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.15)] flex items-center justify-center p-4 hover:shadow-[0_8px_30px_rgba(212,168,67,0.25)] hover:scale-105 hover:border-eurogold-400/30 transition-all duration-300 group cursor-pointer">
               <img src={`/${file}`} alt="Certification Standard Logo" class="max-w-full max-h-full object-contain opacity-85 group-hover:opacity-100 transition-opacity duration-300" width="112" height="112" loading="lazy" />
             </div>
           ))}
