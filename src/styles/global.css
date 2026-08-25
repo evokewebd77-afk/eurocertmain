@@ -38,3 +38,23 @@
 .animate-marquee-left-fast:hover {
   animation-play-state: paused !important;
 }
+
+
+/* Hero Section Overlay Contrast Enhancement for Non-Home Pages */
+body.non-home-page section:first-of-type {
+  position: relative !important;
+}
+
+body.non-home-page section:first-of-type::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(180deg, rgba(1, 6, 15, 0.70) 0%, rgba(3, 10, 22, 0.60) 45%, rgba(3, 10, 22, 0.85) 100%) !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+body.non-home-page section:first-of-type > * {
+  position: relative !important;
+  z-index: 10 !important;
+}
