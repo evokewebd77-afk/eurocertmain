@@ -2,8 +2,14 @@ import React, { useState, useEffect } from 'react';
 
 export default function FloatingActionButtons() {
   const [visible, setVisible] = useState(false);
+  const [isFostacPage, setIsFostacPage] = useState(false);
 
   useEffect(() => {
+    if (typeof window !== 'undefined' && window.location.pathname.includes('/training/fostac')) {
+      setIsFostacPage(true);
+      return;
+    }
+
     const handleScroll = () => {
       if (window.scrollY > 250) {
         setVisible(true);
@@ -19,6 +25,10 @@ export default function FloatingActionButtons() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  if (isFostacPage) {
+    return null;
+  }
 
   const phoneNum = "919316012883";
   const emailUrl = "mailto:info@eurocert.in?cc=eurocert.mv@gmail.com";
