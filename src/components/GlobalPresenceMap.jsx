@@ -254,17 +254,22 @@ export default function GlobalPresenceMap() {
             {filteredCountries.map((c) => {
               const isSelected = selectedCountry === c.name;
               return (
-                <button
+                                <button
                   key={c.name}
                   onClick={() => handleCountryClick(c)}
+                  style={
+                    isSelected 
+                      ? { backgroundColor: '#d8ad4c', color: '#030a16', fontWeight: '800', border: '1.5px solid #d8ad4c', boxShadow: '0 0 20px rgba(216,173,76,0.6)', transform: 'scale(1.06)' } 
+                      : {}
+                  }
                   className={`px-3.5 py-2 rounded-xl text-xs font-semibold transition-all duration-300 flex items-center gap-1.5 ${
                     isSelected
-                      ? 'bg-gradient-to-r from-[#d8ad4c] to-[#e5bc5f] text-slate-950 font-bold shadow-[0_0_18px_rgba(212,168,67,0.45)] scale-105 border border-[#d8ad4c]'
-                      : 'bg-white/5 hover:bg-white/10 text-white/80 border border-white/10 hover:border-[#d8ad4c]/40'
+                      ? ''
+                      : 'bg-white/5 hover:bg-white/10 text-white/90 border border-white/10 hover:border-[#d8ad4c]/50'
                   }`}
                 >
-                  {c.isHQ && <span className="text-amber-300 font-bold">★</span>}
-                  {c.name}
+                  {c.isHQ && <span style={{ color: isSelected ? '#030a16' : '#d8ad4c', fontWeight: 'bold' }}>★</span>}
+                  <span style={{ color: isSelected ? '#030a16' : '#ffffff', fontWeight: isSelected ? '800' : '600' }}>{c.name}</span>
                 </button>
               );
             })}
