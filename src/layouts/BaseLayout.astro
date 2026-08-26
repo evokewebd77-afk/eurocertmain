@@ -2,6 +2,7 @@
 import TopBar from '../components/TopBar.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import FloatingActionButtons from '../components/FloatingActionButtons.jsx';
 import HeaderSearchModal from '../components/HeaderSearchModal.jsx';
 import MobileNav from '../components/MobileNav.jsx';
 
@@ -94,6 +95,7 @@ const {
         <slot />
       </div>
       <Footer />
+    <FloatingActionButtons client:only="react" />
     </div>
 
     <!-- React Islands -->
