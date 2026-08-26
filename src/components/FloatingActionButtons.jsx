@@ -11,7 +11,7 @@ export default function FloatingActionButtons() {
     }
 
     const handleScroll = () => {
-      if (window.scrollY > 250) {
+      if (window.scrollY > 200) {
         setVisible(true);
       } else {
         setVisible(false);
@@ -35,7 +35,7 @@ export default function FloatingActionButtons() {
 
   return (
     <div 
-      className={`fixed bottom-24 right-5 sm:bottom-28 sm:right-7 z-[9999] flex flex-col gap-3 transition-all duration-400 ${
+      className={`fixed bottom-8 right-8 z-50 flex flex-col gap-3 transition-all duration-400 ${
         visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6 pointer-events-none'
       }`}
     >
