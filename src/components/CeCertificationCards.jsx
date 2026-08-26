@@ -52,7 +52,7 @@ const CE_CARDS = [
     shortTitle: 'LVD (2014/35/EU) & EMC (2014/30/EU)',
     href: '/lvd-emc',
     description: 'LVD and EMC directives cover electrical safety and electromagnetic compatibility for electrical products sold in the EU.',
-    image: 'https://res.cloudinary.com/dwnnakrrh/image/upload/f_auto,q_auto:good,w_1600/v1782368054/eurocert/ee.webp.webp',
+    image: 'https://res.cloudinary.com/dwnnakrrh/image/upload/f_auto,q_auto:good,w_1600/v1782367742/eurocert/LVDEMC.jpeg.jpg',
     items: ['Household appliances', 'Information technology equipment', 'Industrial electrical gear', 'Lighting equipment', 'Electronic components']
   },
   {
