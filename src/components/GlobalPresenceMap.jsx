@@ -215,7 +215,7 @@ export default function GlobalPresenceMap() {
           </div>
 
           <h2 className="heading-font text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-4">
-            Global <span className="relative inline-block text-[#d8ad4c] px-4 py-1.5 bg-[#d8ad4c]/15 border border-[#d8ad4c]/40 rounded-2xl shadow-[0_0_35px_rgba(216,173,76,0.35)] drop-shadow-[0_0_25px_rgba(216,173,76,0.6)]">Presence</span>
+            Global <span className="text-[#d8ad4c] drop-shadow-[0_0_25px_rgba(216,173,76,0.6)]">Presence</span>
           </h2>
 
           <p className="text-white/60 text-sm sm:text-base leading-relaxed">
