@@ -34,7 +34,7 @@ const CE_CARDS = [
     shortTitle: 'PED (2014/68/EU)',
     href: '/ped',
     description: 'The Pressure Equipment Directive (2014/68/EU) applies to the design, manufacture, and conformity assessment of pressure equipment and assemblies.',
-    image: 'https://res.cloudinary.com/dwnnakrrh/image/upload/f_auto,q_auto:good,w_1600/v1782367986/eurocert/c3.png.png',
+    image: 'https://res.cloudinary.com/dwnnakrrh/image/upload/f_auto,q_auto:good,w_1600/v1782367819/eurocert/PED.jpeg.jpg',
     items: ['Pressure vessels', 'Piping systems', 'Safety accessories', 'Pressure accessories', 'Steam boilers']
   },
   {
