@@ -6,6 +6,179 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   title="FoSTaC Training - Food Safety Training & Certification | EUROCERT"
   description="FSSAI FoSTaC Training and Certification courses for food handlers, supervisors, and managers by EUROCERT."
 >
+  <style is:global>
+    @font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:900;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.woff2) format('woff2')}@font-face{font-family:"Font Awesome 6 Brands";font-style:normal;font-weight:400;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.woff2) format('woff2')}@font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:400;font-display:swap;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-regular-400.woff2) format('woff2')}
+.ft-form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  width: 100%;
+}
+@media (min-width: 720px) {
+  .ft-form-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+}
+.ft-form-grid > div {
+  min-width: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ft-form select,
+.ft-form input,
+.ft-form textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin: 0;
+  font: inherit;
+  font-size: 15px;
+  line-height: 1.4;
+  background: #fff;
+  color: var(--ink, #0f172a);
+}
+.ft-form select { appearance: auto; }
+.ft-form label.ft-lab {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin: 0 0 6px;
+}
+.ft-form .ft-span-2 { grid-column: 1 / -1; }
+.ft-map-link { color: var(--orange); font-weight: 700; text-decoration: underline; }
+.ft-batch-note {
+  margin-top: 12px; padding: 12px 14px; border-radius: 8px;
+  background: #fff7ed; border: 1px solid #fed7aa; color: #9a3412; font-size: 13.5px; line-height: 1.5;
+}
+.ft-batch-note a { color: #c2410c; font-weight: 700; text-decoration: underline; }
+
+
+.ft-flyer-dl {
+  margin-top: 20px; display: flex; flex-wrap: wrap; gap: 18px; align-items: center;
+  padding: 20px 22px; border-radius: 12px; border: 1px solid #e5eaf0;
+  background: #fff; box-shadow: 0 12px 32px rgba(15,23,42,.08);
+}
+.ft-flyer-dl-thumb {
+  width: 96px; height: 128px; object-fit: cover; border-radius: 8px;
+  border: 1px solid #e2e8f0; flex-shrink: 0;
+}
+.ft-flyer-dl-copy { flex: 1; min-width: 200px; }
+.ft-flyer-dl-copy h3 { margin: 0 0 6px; font-size: 18px; color: var(--navy); }
+.ft-flyer-dl-copy p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.5; }
+.ft-flyer-dl .ft-btn { margin-top: 0; }
+.ft-venue-block {
+  margin-top: 10px; padding: 12px 14px; border-radius: 8px;
+  background: #f8fafc; border: 1px solid #e2e8f0; font-size: 13.5px; line-height: 1.55; color: #334155;
+}
+.ft-venue-card {
+  grid-column: 1 / -1;
+  order: 6;
+  margin-top: 4px;
+  background: #fff;
+  border: 1px solid #e6ebf1;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(15,23,42,.08);
+}
+.ft-venue-card-head {
+  display: flex; align-items: center; gap: 12px;
+  padding: 16px 20px;
+  background: linear-gradient(90deg, #001a33 0%, #0b2a4a 100%);
+  color: #fff;
+}
+.ft-venue-card-head .ico {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: rgba(242,108,33,.2); color: #f26c21;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.ft-venue-card-head h3 {
+  margin: 0; font-size: 16px; font-weight: 800; letter-spacing: .02em;
+}
+.ft-venue-card-head p {
+  margin: 2px 0 0; font-size: 12px; opacity: .75;
+}
+.ft-venue-card-body {
+  display: grid;
+  grid-template-columns: minmax(240px, 320px) 1fr;
+  min-height: 300px;
+}
+.ft-venue-info {
+  padding: 20px 18px;
+  background: #f8fafc;
+  border-right: 1px solid #eef2f7;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.ft-venue-info .line {
+  display: flex; gap: 10px; align-items: flex-start;
+  font-size: 14px; line-height: 1.5; color: #334155;
+}
+.ft-venue-info .line i {
+  color: #f26c21; margin-top: 3px; width: 16px; text-align: center; flex-shrink: 0;
+}
+.ft-venue-info .line strong {
+  display: block; font-size: 11px; letter-spacing: .06em;
+  text-transform: uppercase; color: #64748b; margin-bottom: 2px;
+}
+.ft-venue-btns { display: flex; flex-direction: column; gap: 8px; margin-top: auto; }
+.ft-venue-btns a {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 42px; padding: 10px 14px; border-radius: 8px;
+  font-size: 13px; font-weight: 700; text-decoration: none;
+}
+.ft-venue-btns .go {
+  background: #f26c21; color: #fff;
+}
+.ft-venue-btns .go:hover { background: #d95a14; }
+.ft-venue-btns .open {
+  background: #fff; color: #001a33; border: 1px solid #dbe3ee;
+}
+.ft-venue-btns .open:hover { border-color: #001a33; }
+.ft-venue-map {
+  min-height: 300px; background: #e2e8f0; position: relative;
+}
+.ft-venue-map iframe {
+  position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block;
+}
+@media (max-width: 860px) {
+  .ft-venue-card-body { grid-template-columns: 1fr; }
+  .ft-venue-info { border-right: 0; border-bottom: 1px solid #eef2f7; }
+  .ft-venue-map { min-height: 260px; }
+  .ft-venue-map iframe { position: relative; min-height: 260px; }
+}
+
+/* FoSTaC page only — dedicated WhatsApp float */
+.ft-float {
+  position: fixed; right: 18px; bottom: 18px; z-index: 9999;
+  display: flex; flex-direction: column; gap: 10px; align-items: flex-end;
+}
+.ft-float a {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 54px; height: 54px; border-radius: 50%;
+  text-decoration: none; box-shadow: 0 10px 28px rgba(0,0,0,.28);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.ft-float a:hover { transform: translateY(-2px) scale(1.04); }
+.ft-float .ft-wa {
+  background: #25d366; color: #fff;
+}
+.ft-float .ft-wa i { font-size: 28px; color: #fff; }
+.ft-float .ft-call {
+  background: #001a33; color: #f26c21; border: 1.5px solid rgba(242,108,33,.55);
+}
+.ft-float .ft-call i { font-size: 18px; color: #f26c21; }
+@media (max-width: 640px) {
+  .ft-float { right: 14px; bottom: 14px; }
+  .ft-float a { width: 50px; height: 50px; }
+}
+
+
+  </style>
+
   
 <section class="ft-hero">
   <div class="ft-wrap ft-hero-inner">
