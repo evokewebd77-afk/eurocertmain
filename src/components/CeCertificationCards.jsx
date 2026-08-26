@@ -106,7 +106,7 @@ const CE_CARDS = [
     shortTitle: 'EU MDR (2017/745)',
     href: '/medical-devices',
     description: 'Compliance support and technical documentation review for medical devices under European MDR/IVDR.',
-    image: 'https://res.cloudinary.com/dwnnakrrh/image/upload/f_auto,q_auto:good,w_1600/v1782368169/eurocert/m10.png.png',
+    image: 'https://res.cloudinary.com/dwnnakrrh/image/upload/f_auto,q_auto:good,w_1600/v1782367751/eurocert/MEDICAL-DEVICES.jpeg.jpg',
     items: ['Technical file compilation', 'Clinical evaluation reports', 'Risk management (ISO 14971)', 'Quality system (ISO 13485)', 'PRRC advisory support']
   }
 ];
