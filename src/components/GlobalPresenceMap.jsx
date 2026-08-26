@@ -1,35 +1,35 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 const COUNTRIES = [
-  { name: "Greece", desc: "Global Headquarters - Eurocert SA (est. 1998), Greece", position: [39.1, 21.8], isHQ: true },
-  { name: "Australia", desc: "Eurocert International Operations", position: [-25.3, 133.8] },
-  { name: "Bahrain", desc: "Eurocert Regional Operations", position: [26.1, 50.6] },
-  { name: "Bangladesh", desc: "Eurocert Regional Operations", position: [23.7, 90.4] },
-  { name: "Bulgaria", desc: "Eurocert European Operations", position: [42.7, 25.5] },
-  { name: "Canada", desc: "Eurocert Americas Operations", position: [56.1, -106.3] },
-  { name: "Egypt", desc: "Eurocert MENA Operations", position: [26.8, 30.8] },
-  { name: "France", desc: "Eurocert European Operations", position: [46.2, 2.2] },
-  { name: "Gabon", desc: "Eurocert Africa Operations", position: [-0.8, 11.6] },
-  { name: "Georgia", desc: "Eurocert Regional Operations", position: [42.3, 43.4] },
-  { name: "India", desc: "Eurocert Asia Headquarters", position: [30.7, 76.8] },
-  { name: "Iran", desc: "Eurocert Regional Operations", position: [32.4, 53.7] },
-  { name: "Italy", desc: "Eurocert European Operations", position: [41.9, 12.6] },
-  { name: "Japan", desc: "Eurocert East Asia Operations", position: [36.2, 138.3] },
-  { name: "Jordan", desc: "Eurocert MENA Operations", position: [31.0, 36.2] },
-  { name: "Kingdom of Saudi Arabia", desc: "Eurocert Middle East Operations", position: [24.0, 45.0] },
-  { name: "Libya", desc: "Eurocert MENA Operations", position: [26.3, 17.2] },
-  { name: "Malaysia", desc: "Eurocert Southeast Asia Operations", position: [4.2, 101.9] },
-  { name: "Oman", desc: "Eurocert Regional Operations", position: [21.5, 55.9] },
-  { name: "Pakistan", desc: "Eurocert South Asia Operations", position: [30.3, 69.3] },
-  { name: "Poland", desc: "Eurocert European Operations", position: [51.9, 19.1] },
-  { name: "Qatar", desc: "Eurocert Regional Operations", position: [25.3, 51.1] },
-  { name: "Romania", desc: "Eurocert European Operations", position: [45.9, 24.9] },
-  { name: "Serbia", desc: "Eurocert European Operations", position: [44.0, 21.0] },
-  { name: "Spain", desc: "Eurocert European Operations", position: [40.4, -3.7] },
-  { name: "Turkey", desc: "Eurocert Regional Operations", position: [38.9, 35.2] },
-  { name: "UAE", desc: "Eurocert Middle East Operations", position: [23.4, 53.8] },
-  { name: "United Kingdom", desc: "Eurocert UK & Ireland Operations", position: [55.3, -3.4] },
-  { name: "Vietnam", desc: "Eurocert Southeast Asia Operations", position: [14.0, 108.2] }
+  { name: "Greece", desc: "Global Headquarters - Eurocert SA (est. 1998), Greece", position: [39.0742, 21.8243], isHQ: true },
+  { name: "Australia", desc: "Eurocert International Operations", position: [-25.2744, 133.7751] },
+  { name: "Bahrain", desc: "Eurocert Regional Operations", position: [26.0667, 50.5577] },
+  { name: "Bangladesh", desc: "Eurocert Regional Operations", position: [23.6850, 90.3563] },
+  { name: "Bulgaria", desc: "Eurocert European Operations", position: [42.7339, 25.4858] },
+  { name: "Canada", desc: "Eurocert Americas Operations", position: [56.1304, -106.3468] },
+  { name: "Egypt", desc: "Eurocert MENA Operations", position: [26.8206, 30.8025] },
+  { name: "France", desc: "Eurocert European Operations", position: [46.2276, 2.2137] },
+  { name: "Gabon", desc: "Eurocert Africa Operations", position: [-0.8037, 11.6094] },
+  { name: "Georgia", desc: "Eurocert Regional Operations", position: [42.3154, 43.3569] },
+  { name: "India", desc: "Eurocert Asia Headquarters", position: [20.5937, 78.9629] },
+  { name: "Iran", desc: "Eurocert Regional Operations", position: [32.4279, 53.6880] },
+  { name: "Italy", desc: "Eurocert European Operations", position: [41.8719, 12.5674] },
+  { name: "Japan", desc: "Eurocert East Asia Operations", position: [36.2048, 138.2529] },
+  { name: "Jordan", desc: "Eurocert MENA Operations", position: [30.5852, 36.2384] },
+  { name: "Kingdom of Saudi Arabia", desc: "Eurocert Middle East Operations", position: [23.8859, 45.0792] },
+  { name: "Libya", desc: "Eurocert MENA Operations", position: [26.3351, 17.2283] },
+  { name: "Malaysia", desc: "Eurocert Southeast Asia Operations", position: [4.2105, 101.9758] },
+  { name: "Oman", desc: "Eurocert Regional Operations", position: [21.5126, 55.9233] },
+  { name: "Pakistan", desc: "Eurocert South Asia Operations", position: [30.3753, 69.3451] },
+  { name: "Poland", desc: "Eurocert European Operations", position: [51.9194, 19.1451] },
+  { name: "Qatar", desc: "Eurocert Regional Operations", position: [25.3548, 51.1839] },
+  { name: "Romania", desc: "Eurocert European Operations", position: [45.9432, 24.9668] },
+  { name: "Serbia", desc: "Eurocert European Operations", position: [44.0165, 21.0059] },
+  { name: "Spain", desc: "Eurocert European Operations", position: [40.4637, -3.7492] },
+  { name: "Turkey", desc: "Eurocert Regional Operations", position: [38.9637, 35.2433] },
+  { name: "UAE", desc: "Eurocert Middle East Operations", position: [23.4241, 53.8478] },
+  { name: "United Kingdom", desc: "Eurocert UK & Ireland Operations", position: [55.3781, -3.4360] },
+  { name: "Vietnam", desc: "Eurocert Southeast Asia Operations", position: [14.0583, 108.2772] }
 ];
 
 export default function GlobalPresenceMap() {
@@ -47,7 +47,7 @@ export default function GlobalPresenceMap() {
   useEffect(() => {
     let isMounted = true;
 
-    const loadLeafletFromCDN = () => {
+    const loadLeafletScript = () => {
       return new Promise((resolve, reject) => {
         if (window.L) {
           resolve(window.L);
@@ -63,21 +63,21 @@ export default function GlobalPresenceMap() {
           document.head.appendChild(link);
         }
 
-        // Add Leaflet JS Script
+        // Add Leaflet Script
         if (!document.getElementById('leaflet-js-cdn')) {
           const script = document.createElement('script');
           script.id = 'leaflet-js-cdn';
           script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
           script.onload = () => resolve(window.L);
-          script.onerror = () => reject(new Error('Failed to load Leaflet script'));
+          script.onerror = () => reject(new Error('Leaflet script failed to load'));
           document.head.appendChild(script);
         } else {
-          const interval = setInterval(() => {
+          const poll = setInterval(() => {
             if (window.L) {
-              clearInterval(interval);
+              clearInterval(poll);
               resolve(window.L);
             }
-          }, 100);
+          }, 50);
         }
       });
     };
@@ -86,10 +86,10 @@ export default function GlobalPresenceMap() {
       if (typeof window === 'undefined' || !mapContainerRef.current) return;
 
       try {
-        const L = await loadLeafletFromCDN();
+        const L = await loadLeafletScript();
         if (!isMounted || !mapContainerRef.current || !L) return;
 
-        // Cleanup existing map
+        // Cleanup existing Leaflet instance if present
         if (mapInstanceRef.current) {
           mapInstanceRef.current.remove();
           mapInstanceRef.current = null;
@@ -99,9 +99,9 @@ export default function GlobalPresenceMap() {
           mapContainerRef.current._leaflet_id = null;
         }
 
-        // Initialize Map
+        // Initialize Leaflet Map centered over Mediterranean / Middle East
         const map = L.map(mapContainerRef.current, {
-          center: [28.0, 30.0],
+          center: [28.0, 35.0],
           zoom: 2.8,
           minZoom: 2,
           maxZoom: 8,
@@ -111,23 +111,23 @@ export default function GlobalPresenceMap() {
 
         mapInstanceRef.current = map;
 
-        // Add Zoom Control
+        // Add Zoom Control at bottom right
         L.control.zoom({ position: 'bottomright' }).addTo(map);
 
-        // Add Dark Map Tiles
+        // Add Dark Map Tile Layer (CartoDB Dark Matter)
         L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
           maxZoom: 19,
           subdomains: 'abcd'
         }).addTo(map);
 
-        const hqPos = [39.1, 21.8]; // Greece HQ
+        const hqPos = [39.0742, 21.8243]; // Greece HQ
 
-        // Curved Flight Line Helper
+        // Curved Flight Path Helper
         const getCurvedPoints = (pos1, pos2) => {
           const lat1 = pos1[0], lng1 = pos1[1];
           const lat2 = pos2[0], lng2 = pos2[1];
-          const midLat = (lat1 + lat2) / 2 + (lng2 - lng1) * 0.15;
-          const midLng = (lng1 + lng2) / 2 - (lat2 - lat1) * 0.15;
+          const midLat = (lat1 + lat2) / 2 + (lng2 - lng1) * 0.12;
+          const midLng = (lng1 + lng2) / 2 - (lat2 - lat1) * 0.12;
 
           const points = [];
           for (let t = 0; t <= 1; t += 0.05) {
@@ -138,7 +138,7 @@ export default function GlobalPresenceMap() {
           return points;
         };
 
-        // Add Markers and Lines
+        // Add Markers and Connecting Arcs
         COUNTRIES.forEach((country) => {
           const isHQ = country.isHQ;
 
@@ -156,10 +156,10 @@ export default function GlobalPresenceMap() {
           const markerHtml = isHQ 
             ? `<div style="display:flex; align-items:center; white-space:nowrap; cursor:pointer;">
                 <div style="position:relative; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-                  <div style="position:absolute; width:24px; height:24px; border-radius:50%; background:#d8ad4c; opacity:0.4; animation:pulse 2s infinite;"></div>
+                  <div style="position:absolute; width:26px; height:26px; border-radius:50%; background:#d8ad4c; opacity:0.4; animation:pulse 2s infinite;"></div>
                   <div style="width:14px; height:14px; border-radius:50%; background:#d8ad4c; border:2px solid #ffffff; box-shadow:0 0 12px #d8ad4c;"></div>
                 </div>
-                <span style="margin-left:6px; font-size:12px; font-weight:800; color:#030a16; background:#d8ad4c; padding:2px 8px; border-radius:6px; font-family:system-ui,-apple-system,sans-serif; letter-spacing:0.02em;">HQ Greece</span>
+                <span style="margin-left:6px; font-size:12px; font-weight:800; color:#030a16; background:#d8ad4c; padding:2px 8px; border-radius:6px; font-family:system-ui,-apple-system,sans-serif; letter-spacing:0.02em; box-shadow:0 2px 8px rgba(0,0,0,0.5);">HQ Greece</span>
                </div>`
             : `<div style="display:flex; align-items:center; white-space:nowrap; cursor:pointer;">
                 <div style="width:9px; height:9px; border-radius:50%; background:#ffffff; border:1.5px solid #d8ad4c; box-shadow:0 0 8px rgba(216,173,76,0.8); flex-shrink:0;"></div>
@@ -203,10 +203,10 @@ export default function GlobalPresenceMap() {
           if (mapInstanceRef.current) {
             mapInstanceRef.current.invalidateSize();
           }
-        }, 300);
+        }, 200);
 
       } catch (err) {
-        console.error('Leaflet CDN load error:', err);
+        console.error('GlobalPresenceMap init error:', err);
       }
     };
 
