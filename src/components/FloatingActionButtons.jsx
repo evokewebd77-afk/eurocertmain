@@ -35,14 +35,14 @@ export default function FloatingActionButtons() {
 
   return (
     <div 
-      className={`fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-[9999] flex flex-col gap-3 transition-all duration-400 ${
+      className={`fixed bottom-24 right-5 sm:bottom-28 sm:right-7 z-[9999] flex flex-col gap-3 transition-all duration-400 ${
         visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6 pointer-events-none'
       }`}
     >
       {/* Phone Button */}
       <a
         href={`tel:+${phoneNum}`}
-        className="w-12 h-12 rounded-full bg-[#061226]/90 backdrop-blur-md border border-[#d8ad4c]/40 text-[#d8ad4c] hover:bg-[#d8ad4c] hover:text-[#030a16] shadow-[0_4px_20px_rgba(0,0,0,0.5)] hover:border-[#d8ad4c] hover:shadow-[0_0_25px_rgba(216,173,76,0.6)] flex items-center justify-center transition-all duration-300 group cursor-pointer"
+        className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#061226]/90 backdrop-blur-md border border-[#d8ad4c]/40 text-[#d8ad4c] hover:bg-[#d8ad4c] hover:text-[#030a16] shadow-[0_4px_20px_rgba(0,0,0,0.5)] hover:border-[#d8ad4c] hover:shadow-[0_0_25px_rgba(216,173,76,0.6)] flex items-center justify-center transition-all duration-300 group cursor-pointer"
         aria-label="Call us (+91 9316012883)"
         title="Call us: +91 9316012883"
       >
@@ -54,7 +54,7 @@ export default function FloatingActionButtons() {
         href={`https://wa.me/${phoneNum}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="w-12 h-12 rounded-full bg-[#061226]/90 backdrop-blur-md border border-[#d8ad4c]/40 text-[#d8ad4c] hover:bg-[#25D366] hover:text-white hover:border-[#25D366] shadow-[0_4px_20px_rgba(0,0,0,0.5)] hover:shadow-[0_0_25px_rgba(37,211,102,0.6)] flex items-center justify-center transition-all duration-300 group cursor-pointer"
+        className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#061226]/90 backdrop-blur-md border border-[#d8ad4c]/40 text-[#d8ad4c] hover:bg-[#25D366] hover:text-white hover:border-[#25D366] shadow-[0_4px_20px_rgba(0,0,0,0.5)] hover:shadow-[0_0_25px_rgba(37,211,102,0.6)] flex items-center justify-center transition-all duration-300 group cursor-pointer"
         aria-label="Chat on WhatsApp"
         title="Chat on WhatsApp"
       >
@@ -66,7 +66,7 @@ export default function FloatingActionButtons() {
         href={emailUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="w-12 h-12 rounded-full bg-[#061226]/90 backdrop-blur-md border border-[#d8ad4c]/40 text-[#d8ad4c] hover:bg-[#d8ad4c] hover:text-[#030a16] shadow-[0_4px_20px_rgba(0,0,0,0.5)] hover:border-[#d8ad4c] hover:shadow-[0_0_25px_rgba(216,173,76,0.6)] flex items-center justify-center transition-all duration-300 group cursor-pointer"
+        className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#061226]/90 backdrop-blur-md border border-[#d8ad4c]/40 text-[#d8ad4c] hover:bg-[#d8ad4c] hover:text-[#030a16] shadow-[0_4px_20px_rgba(0,0,0,0.5)] hover:border-[#d8ad4c] hover:shadow-[0_0_25px_rgba(216,173,76,0.6)] flex items-center justify-center transition-all duration-300 group cursor-pointer"
         aria-label="Email Us"
         title="Email Us: info@eurocert.in"
       >
@@ -77,7 +77,7 @@ export default function FloatingActionButtons() {
       <button
         type="button"
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="w-12 h-12 rounded-full bg-[#061226]/90 backdrop-blur-md border border-[#d8ad4c]/40 text-[#d8ad4c] hover:bg-[#d8ad4c] hover:text-[#030a16] shadow-[0_4px_20px_rgba(0,0,0,0.5)] hover:border-[#d8ad4c] hover:shadow-[0_0_25px_rgba(216,173,76,0.6)] flex items-center justify-center transition-all duration-300 group cursor-pointer"
+        className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#061226]/90 backdrop-blur-md border border-[#d8ad4c]/40 text-[#d8ad4c] hover:bg-[#d8ad4c] hover:text-[#030a16] shadow-[0_4px_20px_rgba(0,0,0,0.5)] hover:border-[#d8ad4c] hover:shadow-[0_0_25px_rgba(216,173,76,0.6)] flex items-center justify-center transition-all duration-300 group cursor-pointer"
         aria-label="Scroll to top"
         title="Back to top"
       >
