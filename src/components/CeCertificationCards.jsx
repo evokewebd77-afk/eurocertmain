@@ -34,7 +34,7 @@ const CE_CARDS = [
     shortTitle: 'PED (2014/68/EU)',
     href: '/ped',
     description: 'The Pressure Equipment Directive (2014/68/EU) applies to the design, manufacture, and conformity assessment of pressure equipment and assemblies.',
-    image: 'https://res.cloudinary.com/dwnnakrrh/image/upload/f_auto,q_auto:good,w_1600/v1782367694/eurocert/Gemini_Generated_Image_84ibid84ibid84ib.png.png',
+    image: 'https://res.cloudinary.com/dwnnakrrh/image/upload/f_auto,q_auto:good,w_1600/v1782367986/eurocert/c3.png.png',
     items: ['Pressure vessels', 'Piping systems', 'Safety accessories', 'Pressure accessories', 'Steam boilers']
   },
   {
@@ -43,7 +43,7 @@ const CE_CARDS = [
     shortTitle: 'ATEX DIRECTIVE (2014/34/EU)',
     href: '/atex',
     description: 'ATEX certification ensures equipment intended for use in potentially explosive atmospheres meets health and safety requirements.',
-    image: 'https://res.cloudinary.com/dwnnakrrh/image/upload/f_auto,q_auto:good,w_1600/v1782367850/eurocert/technical-conformity-ce-certification-make-an-imag.jpeg.jpg',
+    image: 'https://res.cloudinary.com/dwnnakrrh/image/upload/f_auto,q_auto:good,w_1600/v1782367990/eurocert/c4.png.png',
     items: ['Electrical equipment for hazardous areas', 'Non-electrical Ex equipment', 'Protective systems', 'Safety devices', 'Components for Ex atmospheres']
   },
   {
@@ -52,7 +52,7 @@ const CE_CARDS = [
     shortTitle: 'LVD (2014/35/EU) & EMC (2014/30/EU)',
     href: '/lvd-emc',
     description: 'LVD and EMC directives cover electrical safety and electromagnetic compatibility for electrical products sold in the EU.',
-    image: 'https://res.cloudinary.com/dwnnakrrh/image/upload/f_auto,q_auto:good,w_1600/v1782367872/eurocert/ad3.webp.webp',
+    image: 'https://res.cloudinary.com/dwnnakrrh/image/upload/f_auto,q_auto:good,w_1600/v1782368054/eurocert/ee.webp.webp',
     items: ['Household appliances', 'Information technology equipment', 'Industrial electrical gear', 'Lighting equipment', 'Electronic components']
   },
   {
@@ -79,7 +79,7 @@ const CE_CARDS = [
     shortTitle: 'EN ISO 9606 & ISO 15614',
     href: '/welder-qualifications',
     description: 'Qualification of welders and welding procedures to European and international standards for structural and pressure applications.',
-    image: 'https://res.cloudinary.com/didtfhfme/image/upload/f_auto,q_auto:good,w_1600/v1783575185/741523514_1940695959929964_6653370092002842626_n.webp_p2r1gq.webp',
+    image: 'https://res.cloudinary.com/dwnnakrrh/image/upload/f_auto,q_auto:good,w_1600/v1782368140/eurocert/l1.png.png',
     items: ['Welder performance qualification (EN ISO 9606)', 'Welding procedure specs (WPQR - ISO 15614)', 'Non-destructive testing (NDT)', 'Welding coordinator approval', 'EN 1090 structural steel execution']
   },
   {
@@ -88,7 +88,7 @@ const CE_CARDS = [
     shortTitle: 'EN 197-1 CEMENT STANDARDS',
     href: '/cement',
     description: 'CE marking of common cements under EN 197-1 and system 1+ constancy of performance verification.',
-    image: 'https://res.cloudinary.com/didtfhfme/image/upload/f_auto,q_auto:good,w_1600/v1783574047/741705148_1722781782204745_9100426133349760718_n.webp_jvbqx7.webp',
+    image: 'https://res.cloudinary.com/dwnnakrrh/image/upload/f_auto,q_auto:good,w_1600/v1782367978/eurocert/c2.png.png',
     items: ['Common cement types (CEM I - CEM V)', 'Special cements', 'Factory production control (FPC) audit', 'Initial type testing (ITT)', 'Constancy of performance certification']
   },
   {
@@ -97,7 +97,7 @@ const CE_CARDS = [
     shortTitle: 'ROHS & WEEE COMPLIANCE',
     href: '/electrical-electronic-products',
     description: 'Product compliance assessments covering RoHS Directive (2011/65/EU) and Eco-design requirements.',
-    image: 'https://res.cloudinary.com/dwnnakrrh/image/upload/f_auto,q_auto:good,w_1600/v1782367694/eurocert/Gemini_Generated_Image_84ibid84ibid84ib.png.png',
+    image: 'https://res.cloudinary.com/dwnnakrrh/image/upload/f_auto,q_auto:good,w_1600/v1782368057/eurocert/ee2.webp.webp',
     items: ['RoHS hazardous substance testing', 'WEEE compliance guidance', 'Ecodesign directive assessments', 'Radio Equipment Directive (RED)', 'Consumer electronics testing']
   },
   {
@@ -106,7 +106,7 @@ const CE_CARDS = [
     shortTitle: 'EU MDR (2017/745)',
     href: '/medical-devices',
     description: 'Compliance support and technical documentation review for medical devices under European MDR/IVDR.',
-    image: 'https://res.cloudinary.com/didtfhfme/image/upload/f_auto,q_auto:good,w_1600/v1783574296/742712205_1522648772090436_2422646429793547828_n.webp_yeyzju.webp',
+    image: 'https://res.cloudinary.com/dwnnakrrh/image/upload/f_auto,q_auto:good,w_1600/v1782368169/eurocert/m10.png.png',
     items: ['Technical file compilation', 'Clinical evaluation reports', 'Risk management (ISO 14971)', 'Quality system (ISO 13485)', 'PRRC advisory support']
   }
 ];
