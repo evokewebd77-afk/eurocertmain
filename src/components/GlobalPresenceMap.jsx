@@ -116,9 +116,10 @@ export default function GlobalPresenceMap() {
 
         // Add Dark Map Tile Layer (CartoDB Dark Matter)
         // Add Free Dark Map Tile Layer (Esri World Dark Gray Base with fallback)
-        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
           maxZoom: 19,
-          attribution: '&copy; Esri &mdash; World Dark Gray Base'
+          subdomains: 'abcd',
+          attribution: '&copy; OpenStreetMap &copy; CARTO'
         }).addTo(map);
 
         const hqPos = [39.0742, 21.8243]; // Greece HQ
@@ -237,7 +238,7 @@ export default function GlobalPresenceMap() {
       <div>
       <style dangerouslySetInnerHTML={{ __html: `
         .leaflet-tile-pane {
-          filter: brightness(85%) contrast(135%) hue-rotate(185deg) invert(90%) sepia(35%);
+          filter: invert(100%) hue-rotate(170deg) brightness(75%) contrast(145%) sepia(100%) saturate(300%);
         }
         .leaflet-container {
           background: #030a16 !important;
@@ -247,7 +248,8 @@ export default function GlobalPresenceMap() {
           color: #d4a843 !important;
           border-color: rgba(212,168,67,0.3) !important;
         }
-      ` }} /> className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_center,rgba(216,173,76,0.06)_0%,transparent_70%)] pointer-events-none"></div>
+      ` }} />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_center,rgba(216,173,76,0.06)_0%,transparent_70%)] pointer-events-none"></div>
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
 
