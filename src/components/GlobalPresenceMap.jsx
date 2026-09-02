@@ -116,10 +116,9 @@ export default function GlobalPresenceMap() {
 
         // Add Dark Map Tile Layer (CartoDB Dark Matter)
         // Add Free Dark Map Tile Layer (Esri World Dark Gray Base with fallback)
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           maxZoom: 19,
-          subdomains: 'abcd',
-          attribution: '&copy; OpenStreetMap &copy; CARTO'
+          attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
 
         const hqPos = [39.0742, 21.8243]; // Greece HQ
@@ -235,10 +234,9 @@ export default function GlobalPresenceMap() {
 
   return (
     <section className="relative overflow-hidden bg-[#030a16] py-16 lg:py-24">
-      <div>
       <style dangerouslySetInnerHTML={{ __html: `
         .leaflet-tile-pane {
-          filter: invert(100%) hue-rotate(170deg) brightness(75%) contrast(145%) sepia(100%) saturate(300%);
+          filter: invert(100%) hue-rotate(180deg) brightness(80%) contrast(145%) sepia(90%) saturate(250%);
         }
         .leaflet-container {
           background: #030a16 !important;
@@ -333,5 +331,5 @@ export default function GlobalPresenceMap() {
 
       </div>
     </section>
-  );
+  ); 
 }
